@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>M2 learner</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+	<div id="rng">
+    	<h2>Random letter generator:</h2>
+    	<p id="letter">A</p>
+		<p>Include letters:</p>
+		<p id="letter-list">A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X</p>
+		<input type="range" id="max-letter" min="1" max="24" value="24" onchange="showLetterList(this.value)"><br>
+		<button type="button" id="show-all-algorithms" onclick="showAllAlgorithms()">Show all algorithms</button> 
+	</div>
+
+	<div id="algorithms">
+		<table>
+			<tr>
+				<th>Letter</th>
+				<th>Algorithm</th>
+				<th>Undo</th>
+			</tr>
+			<tr class="A">
+				<td>A</td>
+				<td>M2</td>
+				<td>/</td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>R U R' U'</td>
+				<td>U R U' R'</td>
+			</tr>
+			<tr>
+				<td>C</td>
+				<td>U2 M' U2 M'</td>
+				<td>/</td>
+			</tr>
+			<tr>
+				<td>D</td>
+				<td>L' U' L U</td>
+				<td>U' L' U L</td>
+			</tr>
+			<tr>
+				<td>E</td>
+				<td>B L' B'</td>
+				<td>B L B'</td>
+			</tr>
+			<tr>
+				<td>F</td>
+				<td>B L2 B'</td>
+				<td>B L2 B'</td>
+			</tr>
+			<tr>
+				<td>G</td>
+				<td>B L B'</td>
+				<td>B L B'</td>
+			</tr>
+			<tr>
+				<td>H</td>
+				<td>L B L' B'</td>
+				<td>B L B' L'</td>
+			</tr>
+			<tr>
+				<td>I</td>
+				<td>D M' U R2 U' M U R2 U' D' M2</td>
+				<td>/</td>
+			</tr>
+			<tr>
+				<td>J</td>
+				<td>U R U'</td>
+				<td>U R U</td>
+			</tr>
+			<tr>
+				<td>K</td>
+				<td>buffer</td>
+				<td>buffer</td>
+			</tr>
+			<tr>
+				<td>L</td>
+				<td>U' L' U</td>
+				<td>U' L U</td>
+			</tr>
+			<tr>
+				<td>M</td>
+				<td>B' R B</td>
+				<td>B' R B</td>
+			</tr>
+			<tr>
+				<td>N</td>
+				<td>R' B' R B</td>
+				<td>B' R' B R</td>
+			</tr>
+			<tr>
+				<td>O</td>
+				<td>B' R' B</td>
+				<td>B' R B</td>
+			</tr>
+			<tr>
+				<td>P</td>
+				<td>B' R2 B</td>
+				<td>B' R2 B</td>
+			</tr>
+			<tr>
+				<td>Q</td>
+				<td>U B' R U' B</td>
+				<td>B' U R' B U'</td>
+			</tr>
+			<tr>
+				<td>R</td>
+				<td>U' L U</td>
+				<td>U' L' U</td>
+			</tr>
+			<tr>
+				<td>S</td>
+				<td>M2 D U R2 U' M' U R2 U' M D'</td>
+				<td>/</td>
+			</tr>
+			<tr>
+				<td>T</td>
+				<td>U R' U'</td>
+				<td>U R U'</td>
+			</tr>
+			<tr>
+				<td>U</td>
+				<td>buffer</td>
+				<td>buffer</td>
+			</tr>
+			<tr>
+				<td>V</td>
+				<td>U R2 U'</td>
+				<td>U R2 U'</td>
+			</tr>
+			<tr>
+				<td>W</td>
+				<td>M U2 M U2</td>
+				<td>/</td>
+			</tr>
+			<tr>
+				<td>X</td>
+				<td>U' L2 U</td>
+				<td>U' L2 U</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html> 
