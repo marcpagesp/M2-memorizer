@@ -11,6 +11,8 @@ document.addEventListener("click", function(e) {
 	let maxLetter = document.getElementById("max-letter").value
 	let letter = document.getElementById("letter")
 	let pos = Math.floor(Math.random() * maxLetter)
+	if (letters[pos] === letter.innerHTML && pos === 23) { pos = 0 } 
+	else if (letters[pos] === letter.innerHTML) { pos++ }
 	letter.innerHTML = letters[pos]
 });
 
