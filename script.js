@@ -1,19 +1,23 @@
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X"]
 
-function showLetterList(maxLetter) {
+document.addEventListener("input", function() {
 	let letterList = document.getElementById("letter-list")
-	letterList.innerHTML = letters.slice(0, maxLetter).join(", ")
-}
+	let max = document.getElementById("max-letter").value
+	let min = document.getElementById("min-letter").value
+	letterList.innerHTML = letters.slice(min, max).join(", ")
+});
 
 document.addEventListener("click", function(e) {
 	e = String(e.target)
 	if (e === "[object HTMLInputElement]" || e === "[object HTMLButtonElement]") { return }
-	let maxLetter = document.getElementById("max-letter").value
+	let max = document.getElementById("max-letter").value
+	let min = document.getElementById("min-letter").value
 	let letter = document.getElementById("letter")
-	let pos = Math.floor(Math.random() * maxLetter)
-	if (letters[pos] === letter.innerHTML && pos === 23) { pos = 0 } 
-	else if (letters[pos] === letter.innerHTML) { pos++ }
-	letter.innerHTML = letters[pos]
+	let lettersIncluded = letters.slice(min, max)
+	let pos = Math.floor(Math.random() * (max - min))
+	if (letter.innerHTML === lettersIncluded[pos] && pos != lettersIncluded.length - 1) { pos++ }
+	else if (letter.innerHTML === lettersIncluded[pos] && pos === lettersIncluded.length - 1) { pos = 0 }
+	letter.innerHTML = lettersIncluded[pos]
 });
 
 function showAllAlgorithms() {

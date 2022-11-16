@@ -12,7 +12,7 @@ body {
 	margin: 5px;
 }
 
-#max-letter {
+#max-letter, #min-letter {
 	margin-bottom: 10px;
 	width: 35vw;
 }
